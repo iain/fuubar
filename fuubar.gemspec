@@ -1,16 +1,14 @@
 # -*- encoding: utf-8 -*-
-$:.push File.expand_path("../lib", __FILE__)
-require "fuubar/version"
 
 Gem::Specification.new do |s|
   s.name        = "fuubar"
-  s.version     = Fuubar::VERSION
+  s.version     = '0.0.1'
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Nicholas Evans", "Jeff Kreeftmeijer"]
+  s.email       = ["jeff@kreeftmeijer.nl"]
   s.homepage    = "http://rubygems.org/gems/fuubar"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{the instafailing RSpec progress bar formatter}
+  s.description = %q{the instafailing RSpec progress bar formatter}
 
   s.rubyforge_project = "fuubar"
 
@@ -18,4 +16,8 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_dependency('rspec', ["~> 2.0"])
+  s.add_dependency('progressbar', ["~> 0.9"])
+  s.add_dependency('rspec-instafail', ["~> 0.1"])
 end
